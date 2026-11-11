@@ -1,0 +1,20 @@
+{
+  "id": "dsh-task-notifier",
+  "name": "DSH Task Notifier",
+  "version": "1.0.0",
+  "description": "DSH 任务完成/失败/待确认时的系统弹窗通知插件（Windows Toast via PowerShell / macOS osascript / Linux notify-send，零依赖）",
+  "publisher": "dsh-community",
+  "main": "src/index.js",
+  "engines": { "dsh": ">=0.2.2" },
+  "events": ["task.completed", "task.failed", "task.confirmationRequired"],
+  "permissions": ["system-notifications"],
+  "configSchema": {
+    "enabled": "boolean, default true",
+    "sound": "boolean, default false",
+    "timeoutMs": "number, default 8000",
+    "dedupeMs": "number, default 3000",
+    "events.completed": "boolean, default true",
+    "events.failed": "boolean, default true",
+    "events.confirmationRequired": "boolean, default true"
+  }
+}

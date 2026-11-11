@@ -1,0 +1,33 @@
+{
+  "name": "dsh-task-notifier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DSH plugin: desktop toast notifications on task completed / failed / confirmation required (cordis host plugin, zero dependencies)",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-task-notifier": "bin/notify.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node test/simulate.js",
+    "simulate": "node test/simulate.js"
+  },
+  "keywords": ["dsh", "plugin", "notification", "toast", "task-board"],
+  "license": "MIT",
+  "files": [
+    "src/**/*.js",
+    "bin/**/*.js",
+    "test/**/*.js",
+    "cordis.patch.yml",
+    "dsh.plugin.json"
+  ]
+}

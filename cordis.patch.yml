@@ -1,0 +1,6 @@
+# Bundle patch: inserts this plugin's roster row into the profile loader tree.
+# The package must also be listed in the profile package.json's
+# dsh.profile.bundles (and as a link: dependency) to be installed.
+- insert:
+    - id: task-notifier
+      name: dsh-task-notifier
